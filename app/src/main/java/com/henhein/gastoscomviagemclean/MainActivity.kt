@@ -37,7 +37,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     }
     private fun isValid(): Boolean {
-        return binding.editTextDistance.text.toString()!="" &&
+        return binding.editTextGanho.text.toString()!="" &&
+                binding.editTextDistance.text.toString()!="" &&
                 binding.editTextPrice.text.toString()!=""&&
                 binding.editTextAutonomy.text.toString()!="" &&
                 binding.editTextAutonomy.text.toString().toFloat()!=0f
@@ -47,11 +48,20 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         var distance =binding.editTextDistance.text.toString().toFloat()
         var price= binding.editTextPrice.text.toString().toFloat()
         var autonomy= binding.editTextAutonomy.text.toString().toFloat()
-        var resultado=distance*price/autonomy
+        var custo=distance*price/autonomy
+        var ganho= binding.editTextGanho.text.toString().toFloat()
+        var lucro=  ganho-custo
 
 
-        binding.textViewResult.text = "R$ ${"%.2f".format(resultado)}"
-        println("Calcula mizerávé R$ ${resultado}")
+
+
+
+
+
+
+        binding.textViewResult.text = "R$ ${"%.2f".format(custo)}"
+        binding.textViewResultLucro.text =  "R$ ${"%.2f".format(lucro)}"
+      
 
     }
     private fun definirRota(){

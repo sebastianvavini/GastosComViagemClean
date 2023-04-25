@@ -26,7 +26,7 @@
         <EditText
             android:id="@+id/editText_Distance"
             android:padding="16dp"
-            android:hint="Distance"
+            android:hint="@string/distancia"
             android:gravity="center"
             android:inputType="numberDecimal"
             android:layout_width="match_parent"
@@ -49,7 +49,7 @@
         <EditText
             android:id="@+id/editText_Price"
             android:padding="16dp"
-            android:hint="Price"
+            android:hint="@string/preco"
             android:inputType="numberDecimal"
             android:gravity="center"
             android:layout_width="match_parent"
@@ -74,7 +74,7 @@
         <EditText
             android:id="@+id/editText_Autonomy"
             android:padding="16dp"
-            android:hint="Autonomy"
+            android:hint="@string/autonomia"
             android:gravity="center"
             android:inputType="numberDecimal"
             android:layout_width="match_parent"
@@ -93,6 +93,58 @@
 
 
         </LinearLayout>
+
+
+
+        <EditText
+            android:id="@+id/editTextGanho"
+            android:padding="16dp"
+            android:hint="Insira seu Ganho"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:orientation="horizontal">
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seu Ganho - $"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+        <Button
+
+            android:id="@+id/button_calculate"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_700"
+            android:text="@string/calculate"
+
+            />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seu Lucro é de:"/>
+
+        <TextView
+            android:id="@+id/textViewResultLucro"
+            android:layout_marginTop="10dp"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/total"/>
         <TextView
             android:layout_marginTop="20dp"
             android:textSize="30dp"
@@ -109,19 +161,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/total"/>
-
-        <Button
-
-            android:id="@+id/button_calculate"
-            android:padding="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/teal_700"
-            android:text="@string/calculate"
-
-            />
-
-
 
 
     </LinearLayout>
